@@ -11,7 +11,7 @@ public class SLConfig {
         Common (ForgeConfigSpec.Builder builder) {
             builder.push("changes");
             collectionRadius = builder.comment("Horizontal radius within which the player picks up item entities").define("Collection radius", 3.0D);
-            collectionDepth = builder.comment("Amount of blocks below the player where sneaking picks up item entities").define("Collection depth", 1.0D);
+            collectionDepth = builder.comment("Amount of blocks below the player where sneaking picks up item entities").define("Collection depth", 2.0D);
             builder.pop();
         }
     }
