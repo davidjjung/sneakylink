@@ -1,0 +1,32 @@
+modLoader = "javafml"
+loaderVersion = "[32,)"
+issueTrackerURL = "https://github.com/davidjjung/sneakylink/issues"
+license = "MIT License"
+
+[[mods]]
+modId = "sneaky_link"
+version = "${file.jarVersion}"
+logoFile = "logo.png"
+itemIcon = "minecraft:dirt"
+configBackground = "minecraft:textures/block/dirt.png"
+authors = "DavigJ"
+credits = "Full credits to Zym for the mod idea!"
+displayURL = "https://github.com/davidjjung/sneakylink"
+displayName = "Sneaky Link"
+description = '''
+    Players can pick up items from farther away while crouching.
+    '''
+
+[[dependencies.sneaky_link]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.2,1.19.3)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.sneaky_link]]
+modId = "forge"
+mandatory = true
+versionRange = "[43.3.0,)"
+ordering = "NONE"
+side = "BOTH"
