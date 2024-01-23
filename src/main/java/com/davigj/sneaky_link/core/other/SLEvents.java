@@ -16,10 +16,10 @@ public class SLEvents {
         Player player = event.player;
         double radius = Math.min(SLConfig.COMMON.collectionRadius.get(), 8.0D);
         double depth = Math.min(SLConfig.COMMON.collectionDepth.get(), 8.0D);
-        if (!player.level.isClientSide && player.tickCount % 5 == 0 && event.phase == TickEvent.Phase.END && player.isCrouching()) {
+        if (player.isCrouching() && !player.level().isClientSide && player.tickCount % 4 == 0 && event.phase == TickEvent.Phase.END) {
             AABB boundingBox = new AABB(player.getX() - radius, player.getY() - depth,
                     player.getZ() - radius,player.getX() + radius, player.getY(), player.getZ() + radius);
-            for (ItemEntity itemEntity : player.level.getEntitiesOfClass(ItemEntity.class, boundingBox)) {
+            for (ItemEntity itemEntity : player.level().getEntitiesOfClass(ItemEntity.class, boundingBox)) {
                 itemEntity.playerTouch(player);
             }
         }
